@@ -1,0 +1,9 @@
+E:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\HelloWorld\bin\Debug\HelloWorld.exe.config
+E:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\HelloWorld\bin\Debug\HelloWorld.exe
+E:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\HelloWorld\bin\Debug\HelloWorld.pdb
+E:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\HelloWorld\obj\Debug\HelloWorld.csprojResolveAssemblyReference.cache
+E:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\HelloWorld\obj\Debug\HelloWorld.Form1.resources
+E:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\HelloWorld\obj\Debug\HelloWorld.Properties.Resources.resources
+E:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\HelloWorld\obj\Debug\HelloWorld.csproj.GenerateResource.Cache
+E:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\HelloWorld\obj\Debug\HelloWorld.exe
+E:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\HelloWorld\obj\Debug\HelloWorld.pdb
