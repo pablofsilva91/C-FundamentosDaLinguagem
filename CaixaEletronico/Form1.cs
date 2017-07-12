@@ -21,10 +21,20 @@ namespace CaixaEletronico
         {
             double numeroDaConta = 1;
             double saldo = 250;
-            double valorDoSaque = 100;
+            double valorDoSaque = 300;
             double valorAposSaque = saldo - valorDoSaque;
+            bool podeSacar = (valorDoSaque <= saldo) && (valorDoSaque > 0);
 
-            MessageBox.Show("Seu saldo é: R$ " + valorAposSaque);
+            if (podeSacar)
+            {
+                saldo = saldo - valorDoSaque;
+                MessageBox.Show("Saque realizado com sucesso! Seu saldo é: " + saldo);
+            }
+            else
+            {
+                MessageBox.Show("Saldo insuficiente");
+            }
+            
 
 
         }

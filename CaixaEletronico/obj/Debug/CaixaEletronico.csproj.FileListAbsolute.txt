@@ -7,3 +7,12 @@ E:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\CaixaEletronico\
 E:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\CaixaEletronico\obj\Debug\CaixaEletronico.csproj.GenerateResource.Cache
 E:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\CaixaEletronico\obj\Debug\CaixaEletronico.exe
 E:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\CaixaEletronico\obj\Debug\CaixaEletronico.pdb
+D:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\CaixaEletronico\bin\Debug\CaixaEletronico.exe.config
+D:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\CaixaEletronico\bin\Debug\CaixaEletronico.exe
+D:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\CaixaEletronico\bin\Debug\CaixaEletronico.pdb
+D:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\CaixaEletronico\obj\Debug\CaixaEletronico.csprojResolveAssemblyReference.cache
+D:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\CaixaEletronico\obj\Debug\CaixaEletronico.Form1.resources
+D:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\CaixaEletronico\obj\Debug\CaixaEletronico.Properties.Resources.resources
+D:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\CaixaEletronico\obj\Debug\CaixaEletronico.csproj.GenerateResource.Cache
+D:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\CaixaEletronico\obj\Debug\CaixaEletronico.exe
+D:\Desenvolvimento\Projetos\GitHub\CSharpFundamentosDaLinguagem\CaixaEletronico\obj\Debug\CaixaEletronico.pdb
