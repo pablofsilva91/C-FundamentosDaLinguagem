@@ -25,23 +25,25 @@ namespace CalculoDeImposto
             if (valorDaNotaFiscal < 1000.0)
             {
                 imposto = (valorDaNotaFiscal * 2) / 100;
-                MessageBox.Show("Imposto:" + imposto);
+               
             }
             else if ((valorDaNotaFiscal >= 1000.0) && (valorDaNotaFiscal < 3000.0))
             { 
                  imposto = (valorDaNotaFiscal * 2.5) / 100;
-                MessageBox.Show("Imposto:" + imposto);
+               
             }
             else if ((valorDaNotaFiscal >= 3000.0) && (valorDaNotaFiscal < 7000.0))
             {
                 imposto = (valorDaNotaFiscal * 2.8) / 100;
-                MessageBox.Show("Imposto:" + imposto);
+               
             }
             else
             {
                 imposto = (valorDaNotaFiscal * 3) / 100;
-                MessageBox.Show("Imposto:" + imposto);
+                
             }
+
+            MessageBox.Show("Imposto:" + imposto);
 
 
 
