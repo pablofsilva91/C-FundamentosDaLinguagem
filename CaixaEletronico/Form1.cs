@@ -128,5 +128,21 @@ namespace CaixaEletronico
             MessageBox.Show("Valores: " + fibonaci);
 
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Conta umaConta = new Conta();
+            umaConta.numero = 1;
+            umaConta.titular = "Pablo";
+            umaConta.saldo = 2000.0;
+
+            MessageBox.Show("Titular conta 1 :" + umaConta.titular);
+
+            Conta outraConta = new Conta();
+            outraConta.cpf = "01904359175";
+            outraConta.agencia = 123;
+
+            MessageBox.Show("Agencia Conta 2 :" + outraConta.agencia);
+        }
     }
 }
