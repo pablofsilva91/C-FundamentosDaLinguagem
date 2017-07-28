@@ -19,21 +19,12 @@ namespace CaixaEletronico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double numeroDaConta = 1;
-            double saldo = 250;
-            double valorDoSaque = 300;
-            double valorAposSaque = saldo - valorDoSaque;
-            bool podeSacar = (valorDoSaque <= saldo) && (valorDoSaque > 0);
+            Conta matheus = new Conta();
+            matheus.saldo = 400;
 
-            if (podeSacar)
-            {
-                saldo = saldo - valorDoSaque;
-                MessageBox.Show("Saque realizado com sucesso! Seu saldo é: " + saldo);
-            }
-            else
-            {
-                MessageBox.Show("Saldo insuficiente");
-            }
+            matheus.saca(200);
+
+       
  
         }
 
@@ -143,6 +134,39 @@ namespace CaixaEletronico
             outraConta.agencia = 123;
 
             MessageBox.Show("Agencia Conta 2 :" + outraConta.agencia);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+            Conta mauricio = new Conta();
+            mauricio.saldo = 100;
+
+            double rendimentoAnual = mauricio.calculoRendimentoAnual();
+
+            MessageBox.Show("Seu rendimento anual é de: " + rendimentoAnual);
+            
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+           
+            Conta matheus = new Conta();
+
+            matheus.deposita(200);
+
+
+
+            
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Conta matheus = new Conta();
+            Conta pablo = new Conta();
+            pablo.saldo = 150;
+
+            pablo.transfere(matheus, 100);
         }
     }
 }
