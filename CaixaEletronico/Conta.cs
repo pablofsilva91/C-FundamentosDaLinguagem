@@ -10,10 +10,12 @@ namespace CaixaEletronico
     public class Conta
     {
         public int numero;
-        public string titular;
+        
         public double saldo;
-        public string cpf;
+        
         public int agencia;
+
+        public Cliente cliente;
 
         public double calculoRendimentoAnual()
         {
