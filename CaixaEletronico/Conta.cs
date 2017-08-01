@@ -15,7 +15,9 @@ namespace CaixaEletronico
         
         public int agencia;
 
-        public Cliente cliente;
+        public Cliente titular;
+
+        //public Cliente cliente;
 
         public double calculoRendimentoAnual()
         {
@@ -31,18 +33,38 @@ namespace CaixaEletronico
             return rendimento;
         }
 
-        public void saca(double valor)
+        public bool saca(double valor)
         {
-            if (valor <= saldo && valor > 0)
+            if (valor > this.saldo || valor < 0)
             {
-                this.saldo -= valor;
-                MessageBox.Show("Saque realizado com sucesso. Saldo atual: " +saldo);
-                
+                MessageBox.Show("não foi possivel realizar o saque");
+                return false;
             }
             else
             {
-                MessageBox.Show("nao foi possível sacar");
+                if (this.titular.EMaiorDeIdade())
+                {
+                    this.saldo -= valor;
+                    MessageBox.Show("Saque realizado com sucesso");
+                    return true;
+                }
+                else
+                {
+                    if(valor <= 200)
+                    {
+                        this.saldo -= valor;
+                        MessageBox.Show("Saque realizado com sucesso");
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("não foi possivel realizar o saque");
+                        return false;
+                    }
+                }
             }
+           
+         
         }
 
         public void deposita(double valor)

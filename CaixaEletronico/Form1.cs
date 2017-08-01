@@ -20,9 +20,14 @@ namespace CaixaEletronico
         private void button1_Click(object sender, EventArgs e)
         {
             Conta matheus = new Conta();
+            Cliente cliente = new Cliente();
+
+            matheus.titular = cliente;
+            matheus.titular.idade = 16;
+
             matheus.saldo = 400;
 
-            matheus.saca(200);
+            matheus.saca(250);
 
        
  
@@ -123,14 +128,19 @@ namespace CaixaEletronico
         private void button8_Click(object sender, EventArgs e)
         {
             Conta umaConta = new Conta();
+            Cliente cliente = new Cliente();
+
+            umaConta.titular = cliente;
+
+
             umaConta.numero = 1;
-            umaConta.titular = "Pablo";
+            umaConta.titular.nome = "Pablo";
             umaConta.saldo = 2000.0;
 
             MessageBox.Show("Titular conta 1 :" + umaConta.titular);
 
             Conta outraConta = new Conta();
-            outraConta.cpf = "01904359175";
+            outraConta.titular.cpf = "01904359175";
             outraConta.agencia = 123;
 
             MessageBox.Show("Agencia Conta 2 :" + outraConta.agencia);
