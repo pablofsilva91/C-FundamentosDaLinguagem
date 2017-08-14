@@ -54,17 +54,14 @@ namespace CaixaEletronico
         {
             string textoDoValorDoDeposito = textoValor.Text;
             double valorDeposito = Convert.ToDouble(textoDoValorDoDeposito);
-            this.conta.Deposita(valorDeposito);
-
-            this.MostraConta();
-
-
+            conta.Deposita(valorDeposito);
+            MostraConta();
         }
 
         private void MostraConta()
         {
-            textoNumero.Text = Convert.ToString(this.conta.Numero);
-            textoSaldo.Text = Convert.ToString(this.conta.Saldo);
+            textoNumero.Text = Convert.ToString(conta.Numero);
+            textoSaldo.Text = Convert.ToString(conta.Saldo);
             textoTitular.Text = this.conta.Titular.Nome;
         }
 
