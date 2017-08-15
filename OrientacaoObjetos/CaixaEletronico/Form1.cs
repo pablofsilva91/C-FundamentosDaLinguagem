@@ -29,10 +29,6 @@ namespace CaixaEletronico
 
             this.MostraConta();
 
-            
-
-
-
         }
         
         private void textoTitular_TextChanged(object sender, EventArgs e)
@@ -72,6 +68,21 @@ namespace CaixaEletronico
             this.conta.Saca(valorDoSaque);
 
             this.MostraConta();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Conta conta = new Conta();
+            ContaPoupanca poupanca = new ContaPoupanca();
+
+            conta.Deposita(100);
+            poupanca.Deposita(50);
+
+            TotalizadorDeContas t = new TotalizadorDeContas();
+            t.Adiciona(conta);
+            t.Adiciona(poupanca);
+
+            MessageBox.Show("totalizador : " + t.SaldoTotal);
         }
     }
 }
