@@ -72,6 +72,7 @@ namespace CaixaEletronico
 
         private void button2_Click(object sender, EventArgs e)
         {
+            /*
             Conta conta = new Conta();
             ContaPoupanca poupanca = new ContaPoupanca();
 
@@ -83,6 +84,22 @@ namespace CaixaEletronico
             t.Adiciona(poupanca);
 
             MessageBox.Show("totalizador : " + t.SaldoTotal);
-        }
+            */
+
+            Conta c1 = new Conta();
+            Conta c2 = new Conta();
+            Banco banco = new Banco();
+
+            banco.adiciona(c1);
+           
+            MessageBox.Show(" numero da conta: " + c1.Numero);
+
+            banco.adiciona(c2);
+
+            MessageBox.Show(" numero da conta: " + c2.Numero);
+
+
+
+        }  
     }
 }
