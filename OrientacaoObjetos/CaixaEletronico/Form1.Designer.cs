@@ -38,7 +38,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.comboContas = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.destinoDaTransferencia = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // textoTitular
@@ -74,7 +76,7 @@
             // 
             // btnDeposito
             // 
-            this.btnDeposito.Location = new System.Drawing.Point(144, 226);
+            this.btnDeposito.Location = new System.Drawing.Point(105, 355);
             this.btnDeposito.Name = "btnDeposito";
             this.btnDeposito.Size = new System.Drawing.Size(75, 23);
             this.btnDeposito.TabIndex = 4;
@@ -84,7 +86,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(42, 226);
+            this.button1.Location = new System.Drawing.Point(24, 355);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
@@ -128,22 +130,42 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Valor:";
             // 
+            // comboContas
+            // 
+            this.comboContas.FormattingEnabled = true;
+            this.comboContas.Location = new System.Drawing.Point(77, 13);
+            this.comboContas.Name = "comboContas";
+            this.comboContas.Size = new System.Drawing.Size(121, 21);
+            this.comboContas.TabIndex = 10;
+            this.comboContas.SelectedIndexChanged += new System.EventHandler(this.comboContas_SelectedIndexChanged);
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(113, 279);
+            this.button2.Location = new System.Drawing.Point(186, 355);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "button2";
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Transferir";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // destinoDaTransferencia
+            // 
+            this.destinoDaTransferencia.FormattingEnabled = true;
+            this.destinoDaTransferencia.Location = new System.Drawing.Point(77, 234);
+            this.destinoDaTransferencia.Name = "destinoDaTransferencia";
+            this.destinoDaTransferencia.Size = new System.Drawing.Size(121, 21);
+            this.destinoDaTransferencia.TabIndex = 12;
+            this.destinoDaTransferencia.SelectedIndexChanged += new System.EventHandler(this.destinoDaTransferencia_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 318);
+            this.ClientSize = new System.Drawing.Size(284, 424);
+            this.Controls.Add(this.destinoDaTransferencia);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.comboContas);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -174,7 +196,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboContas;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox destinoDaTransferencia;
     }
 }
 
