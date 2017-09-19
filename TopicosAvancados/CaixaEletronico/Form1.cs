@@ -191,9 +191,36 @@ namespace CaixaEletronico
 
         public void AdicionaConta (Conta c)
         {
+            if (this.numeroDeContas == this.contas.Length)
+            {
+                Conta[] novo = new Conta[this.contas.Length * 2];
+                for (int i = 0; i < this.numeroDeContas; i++)
+                {
+                    novo[i] = this.contas[i];
+                }
+                this.contas = novo;
+            }
             this.contas[this.numeroDeContas] = c;
             this.numeroDeContas++;
             comboContas.Items.Add(c);
+        }
+
+        public void RemoveContas (Conta c)
+        {
+            comboContas.Items.Remove(c);
+            int i;
+            for (i =0; i < this.numeroDeContas; i++)
+            {
+                if (this.contas[i] == c)
+                {
+                    break;
+                }
+            }
+            while (i + 1 <= this.numeroDeContas)
+            {
+                this.contas[i] = this.contas[i+1];
+                i++;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

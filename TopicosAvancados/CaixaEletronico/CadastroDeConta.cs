@@ -21,7 +21,18 @@ namespace CaixaEletronico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Conta c = new ContaCorrente();
+
+            Conta c = null;
+
+            if(ComboTipoConta.Text == "Poupanca")
+            {
+                c = new ContaPoupanca();
+            }
+            else
+            {
+                c = new ContaCorrente();
+            }
+
             c.Numero = Convert.ToInt32(numeroDaConta.Text);
             c.Titular = new Cliente(titularConta.Text);
             this.aplicacaoPrincipal.AdicionaConta(c);
@@ -30,6 +41,12 @@ namespace CaixaEletronico
         private void CadastroDeConta_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void ComboTipoConta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboTipoConta.Items.Add("Poupanca");
+            ComboTipoConta.Items.Add("Corrente");
         }
     }
 }
