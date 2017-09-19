@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Caelum.CaixaEletronico.Modelo;
+using Caelum.CaixaEletronico.Modelo.Contas;
+using Caelum.CaixaEletronico.Modelo.Usuarios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,36 +27,40 @@ namespace CaixaEletronico
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            contas = new Conta[2];
+            contas = new Conta[20];
 
-            Conta contaDoVictor = new Conta();
+            Conta contaDoVictor = new ContaCorrente();
             contaDoVictor.Titular = new Cliente();
             contaDoVictor.Titular.Nome = "Victor";
             contaDoVictor.Deposita(250);
             contaDoVictor.Numero = 1;
             contas[0] = contaDoVictor;
 
-            Conta contaDoPablo = new Conta();
+            Conta contaDoPablo = new ContaPoupanca();
             contaDoPablo.Titular = new Cliente();
-            contaDoPablo.Titular.Nome = "PAblo";
+            contaDoPablo.Titular.Nome = "Pablo";
             contaDoPablo.Deposita(250);
             contaDoPablo.Numero = 11;
             contas[1] = contaDoPablo;
 
-            /*
-            contas[0].Titular = new Cliente();
-            contas[0].Titular.Nome = "Victor";
-            contas[0].Deposita(250);
-            contas[0].Numero = 1;
-            */
+            Conta contaDoPaulo = new ContaPoupanca();
+            contaDoPaulo.Titular = new Cliente();
+            contaDoPaulo.Titular.Nome = "Paulo";
+            contaDoPaulo.Deposita(250);
+            contaDoPaulo.Numero = 11;
+            contas[2] = contaDoPaulo;
+
+            this.numeroDeContas = 3;
 
             foreach (Conta conta in this.contas)
             {
-                comboContas.Items.Add(conta.Titular.Nome);
-                destinoDaTransferencia.Items.Add(conta.Titular.Nome);
+                if(conta != null)
+                {
+                    comboContas.Items.Add(conta.Titular.Nome);
+                    destinoDaTransferencia.Items.Add(conta.Titular.Nome);
+                }
+                
             }
-
-           // this.MostraConta();
 
         }
         
@@ -74,7 +81,6 @@ namespace CaixaEletronico
 
         private void btnDeposito_Click(object sender, EventArgs e)
         {
-            //int indiceSelecionado = comboContas.SelectedIndex;
             Conta contaSelecionada = this.BuscaContaSelecionada();
 
             string textoDoValorDoDeposito = textoValor.Text;
@@ -85,7 +91,6 @@ namespace CaixaEletronico
             MostraConta(contaSelecionada);
         }
 
-        
         private void MostraConta(Conta conta)
         {
 
@@ -97,7 +102,6 @@ namespace CaixaEletronico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //int indiceSelecionado = comboContas.SelectedIndex;
             Conta contaSelecionada = this.BuscaContaSelecionada();
 
             string textoValorDoSaque = textoValor.Text;
@@ -111,44 +115,22 @@ namespace CaixaEletronico
         private void button2_Click(object sender, EventArgs e)
         {
             
-            Conta conta = new Conta();
             ContaPoupanca poupanca = new ContaPoupanca();
 
-            conta.Deposita(100);
             poupanca.Deposita(50);
 
             TotalizadorDeContas t = new TotalizadorDeContas();
-            t.Adiciona(conta);
-            t.Adiciona(poupanca);
+            //t.Adiciona(conta);
+           // t.Adiciona(poupanca);
 
             MessageBox.Show("totalizador : " + t.SaldoTotal);
             
-            /*
-            Conta c1 = new Conta();
-            Conta c2 = new Conta();
-            Banco banco = new Banco();
-
-            banco.adiciona(c1);
-           
-            MessageBox.Show(" numero da conta: " + c1.Numero);
-
-            banco.adiciona(c2);
-
-            MessageBox.Show(" numero da conta: " + c2.Numero);
-
-            */
-
         }
 
         private void comboContas_SelectedIndexChanged(object sender, EventArgs e)
         {
             int indiceSelecionado = comboContas.SelectedIndex;
             Conta contaSelecionada = contas[indiceSelecionado];
-
-
-            //textoTitular.Text = contaSelecionada.Titular.Nome;
-            //textoNumero.Text = Convert.ToString(contaSelecionada.Numero);
-            //textoSaldo.Text = Convert.ToString(contaSelecionada.Saldo);
 
             this.MostraConta(contaSelecionada);
         }
@@ -202,14 +184,15 @@ namespace CaixaEletronico
             }
             this.contas[this.numeroDeContas] = c;
             this.numeroDeContas++;
-            comboContas.Items.Add(c);
+            comboContas.Items.Add(c.Titular.Nome);
+            
         }
 
         public void RemoveContas (Conta c)
         {
             comboContas.Items.Remove(c);
             int i;
-            for (i =0; i < this.numeroDeContas; i++)
+            for (i = 0; i < this.numeroDeContas; i++)
             {
                 if (this.contas[i] == c)
                 {
@@ -227,6 +210,12 @@ namespace CaixaEletronico
         {
             CadastroDeConta cadastro = new CadastroDeConta(this);
             cadastro.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Conta conta = BuscaContaSelecionada();
+            RemoveContas(conta);
         }
     }
 }

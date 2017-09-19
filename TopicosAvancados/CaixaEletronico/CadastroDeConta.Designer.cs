@@ -31,7 +31,7 @@
             this.titularConta = new System.Windows.Forms.TextBox();
             this.numeroDaConta = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.ComboTipoConta = new System.Windows.Forms.ComboBox();
+            this.comboTipoConta = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // titularConta
@@ -58,21 +58,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ComboTipoConta
+            // comboTipoConta
             // 
-            this.ComboTipoConta.FormattingEnabled = true;
-            this.ComboTipoConta.Location = new System.Drawing.Point(74, 112);
-            this.ComboTipoConta.Name = "ComboTipoConta";
-            this.ComboTipoConta.Size = new System.Drawing.Size(121, 21);
-            this.ComboTipoConta.TabIndex = 3;
-            this.ComboTipoConta.SelectedIndexChanged += new System.EventHandler(this.ComboTipoConta_SelectedIndexChanged);
+            this.comboTipoConta.FormattingEnabled = true;
+            this.comboTipoConta.Location = new System.Drawing.Point(74, 112);
+            this.comboTipoConta.Name = "comboTipoConta";
+            this.comboTipoConta.Size = new System.Drawing.Size(121, 21);
+            this.comboTipoConta.TabIndex = 3;
             // 
             // CadastroDeConta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.ComboTipoConta);
+            this.Controls.Add(this.comboTipoConta);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.numeroDaConta);
             this.Controls.Add(this.titularConta);
@@ -89,6 +88,6 @@
         private System.Windows.Forms.TextBox titularConta;
         private System.Windows.Forms.TextBox numeroDaConta;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox ComboTipoConta;
+        private System.Windows.Forms.ComboBox comboTipoConta;
     }
 }

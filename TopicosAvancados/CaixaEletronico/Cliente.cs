@@ -4,12 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CaixaEletronico
+namespace Caelum.CaixaEletronico.Modelo.Usuarios
 {
-    class Cliente
+    public class Cliente
     {
         public string Nome { get; set; }
-        
+        public string Rg { get; set; }
+        public string cpf;
+        public string endereco;
+        public int idade;
+        private bool EEmancipado;
 
         public Cliente (string nome)
         {

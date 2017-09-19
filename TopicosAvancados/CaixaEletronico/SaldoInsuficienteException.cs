@@ -5,9 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Caelum.CaixaEletronico.Modelo
+
 {
-    interface ITributavel
+    class SaldoInsuficienteException : Exception
     {
-       double CalculaTributo();
+        public SaldoInsuficienteException(string message) : base(message)
+        {
+        }
     }
 }
