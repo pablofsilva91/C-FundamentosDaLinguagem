@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\TopicosAvancados",
+    "\\TopicosAvancados\\CaixaEletronico"
   ],
-  "SelectedNode": "\\OrientacaoObjetos",
+  "SelectedNode": "\\.gitattributes",
   "PreviewInSolutionExplorer": false
 }
